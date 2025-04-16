@@ -5,6 +5,7 @@
 html{
     box-sizing: border-box;
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 *,*:before,*:after{
@@ -13,11 +14,12 @@ html{
 
 
 /*------------------------------------------------------------------------------
-   Base
+Base
 ------------------------------------------------------------------------------*/
 
 body{
     background: #000 url("../images/fond/global.png") repeat;
+    background-attachment: fixed;
     font: 1.6em "Oranienbaum", serif;
     color: white;
 }
@@ -31,6 +33,9 @@ a:hover{
     color: darkorange;
 }
 
+a[hreflang="ja"]::after {
+    content: " [en japonais]";
+}
 
 
 /*------------------------------------------------------------------------------
@@ -112,7 +117,6 @@ a img{
     padding-bottom: 10px;
 }
 
-
 /*---------------------------------------
 Section sports
 ---------------------------------------*/
@@ -121,6 +125,7 @@ Section sports
 
 .sports{
     background: url("../images/fond/bicycles.png") repeat;
+    background-attachment: fixed;
 }
 
 
@@ -133,6 +138,7 @@ Section web
 
 .web{
     background: url("../images/fond/science.png") repeat;
+    background-attachment: fixed;
 }
 
 .web img{
@@ -156,13 +162,14 @@ Section web
 }
 
 /*---------------------------------------
-             Section photographie
- ---------------------------------------*/
+Section photographie
+---------------------------------------*/
 
 /* INSÉREZ VOTRE CSS POUR CETTE SECTION ICI */
 
 .photos{
     background: url("../images/fond/fond.jpg") no-repeat center/cover;
+    background-attachment: fixed;
 }
 
 .photos img{
@@ -181,7 +188,29 @@ Section web
     align-items: center;
 }
 /*---------------------------------------
-    Icône retour
+Icône retour
 ---------------------------------------*/
 
+a.haut{
+    position: fixed;
+    right: 15vw;
+    bottom: 20px;
+    
+}
+
+.material-symbols-outlined:hover{
+    color: darkorange;
+    border-color: darkorange;
+}
+
+.material-symbols-outlined{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 4px solid white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
